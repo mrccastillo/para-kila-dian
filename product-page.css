@@ -331,7 +331,7 @@ h6 {
   height: 100%;
   width: 100%;
   padding: 1rem 0;
-  background-color: #ccb3b3;
+  /* background-color: #ccb3b3; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -350,17 +350,30 @@ h6 {
   padding: 1rem 0;
 }
 
+.ordered-products {
+  height: 11rem;
+  overflow-y: scroll;
+}
+
+.ordered-products::-webkit-scrollbar {
+  display: none;
+}
+
 .ordered-product {
   display: flex;
   justify-content: space-between;
   margin: 1rem 0;
 }
 
-.order-summary > h3,
+.order-total-price {
+  margin-top: 1.5rem;
+}
+
+/* .order-summary > h3,
 .ordered-product > p,
 .product-size > p {
   color: white;
-}
+} */
 
 @media (min-width: 1920px) {
   html {
