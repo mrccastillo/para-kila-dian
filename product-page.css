@@ -1,7 +1,43 @@
+@font-face {
+  font-family: "Bobby Jones";
+  src: url("./assets/fonts/bobby-jones-regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Bobby Jones Condensed";
+  src: url("./assets/fonts/bobby-jones-condensed.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Bobby Jones Soft";
+  src: url("./assets/fonts/bobby-jones-soft-regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "BlueBerry";
+  src: url("./assets/fonts/Blueberry\ .ttf") format("truetype");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Bobby Jones;
+}
+
+p {
+  font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Blueberry;
 }
 
 ::-webkit-scrollbar {
@@ -88,6 +124,7 @@
   margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -113,9 +150,10 @@
 }
 
 .product-image {
-  background-color: #f8d6d6;
-  width: 100%;
-  height: 40%;
+  background: url("./assets/product-4.png");
+  background-size: cover;
+  width: 7rem;
+  height: 7rem;
 }
 
 .product-info-container {
@@ -124,6 +162,7 @@
   justify-content: space-between;
   align-items: center;
   height: 50%;
+  width: 100%;
 }
 
 .quantity {
@@ -209,6 +248,8 @@
 }
 
 .cart-product-image {
+  background: url("./assets/product-4.png");
+  background-size: cover;
   width: 3rem;
   height: 3rem;
 }
@@ -270,8 +311,13 @@
 .order-summary {
   height: 27.5rem;
   width: 15rem;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
   background-color: #b83c3c;
   clip-path: polygon(0 0, 100% 0%, 100% 80%, 50% 100%, 0 80%);
+  padding: 1rem;
 }
 
 .order-status {
@@ -302,6 +348,18 @@
 
 .order-summary {
   padding: 1rem 0;
+}
+
+.ordered-product {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.order-summary > h3,
+.ordered-product > p,
+.product-size > p {
+  color: white;
 }
 
 @media (min-width: 1920px) {
